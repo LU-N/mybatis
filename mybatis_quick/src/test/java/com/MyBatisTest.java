@@ -23,7 +23,7 @@ public class MyBatisTest {
         //获得session回话对象
         SqlSession sqlSession = sqlSessionFactory.openSession(true);
         //执行操作  参数：namespace+id
-        sqlSession.delete("userMapper.delete", 5);
+        sqlSession.delete("userMapper.delete", 4);
         //释放资源
         sqlSession.close();
     }
@@ -34,7 +34,7 @@ public class MyBatisTest {
 
         //模拟user对象
         User user = new User();
-        user.setId(2);
+        user.setId(4);
         user.setUsername("lucy");
         user.setPassword("123");
 

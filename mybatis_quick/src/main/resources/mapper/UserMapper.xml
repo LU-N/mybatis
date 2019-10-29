@@ -8,16 +8,16 @@
 		delete from user where id=#{id}
 	</delete>
 	<!--修改操作-->
-	<update id="update" parameterType="com.domain.User">
+	<update id="update" parameterType="user">
         update user set username=#{username},password=#{password} where id=#{id}
     </update>
 	<!--插入操作-->
-	<insert id="add" parameterType="com.domain.User">
+	<insert id="add" parameterType="user">
 		insert into user values(#{id}, #{username}, #{password})
 	</insert>
 
 	<!--查询操作-->
-	<select id="findAll" resultType="com.domain.User">
+	<select id="findAll" resultType="user">
 		select * from User
 	</select>
 
