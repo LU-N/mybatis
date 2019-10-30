@@ -6,8 +6,7 @@
     <sql id="selectUser">select * from user</sql>
 
     <select id="findByCondition" parameterType="user" resultType="user">
-        <include refid="selectUser"/>
-
+        <include refid="selectUser"></include>
         <where>
             <if test="id!=0">
                 and id = #{id}
@@ -21,7 +20,6 @@
                 and password = #{password}
             </if>
         </where>
-
     </select>
 
     <select id="findByIds" parameterType="list" resultType="user">
@@ -32,6 +30,8 @@
             </foreach>
         </where>
     </select>
-
+    <select id="findAll" resultType="user">
+        select * from user
+    </select>
 
 </mapper>

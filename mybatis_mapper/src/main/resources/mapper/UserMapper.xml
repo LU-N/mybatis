@@ -30,5 +30,8 @@
             </foreach>
         </where>
     </select>
+    <select id="findAll" resultType="user">
+        select * from user
+    </select>
 
 </mapper>

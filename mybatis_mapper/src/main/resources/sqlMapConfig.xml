@@ -7,6 +7,12 @@
     <typeAliases>
         <typeAlias type="com.domain.User" alias="user"></typeAlias>
     </typeAliases>
+    <!--配置分页助手插件-->
+    <plugins>
+        <plugin interceptor="com.github.pagehelper.PageHelper">
+            <property name="dialect" value="mysql"/>
+        </plugin>
+    </plugins>
     <!--数据源环境-->
     <environments default="developement">
         <environment id="developement">

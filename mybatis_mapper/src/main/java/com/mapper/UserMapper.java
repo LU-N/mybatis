@@ -18,5 +18,12 @@ public interface UserMapper {
      */
     public List<User> findByIds(List<Integer> ids);
 
+    /**
+     * findAll
+     *
+     * @return
+     */
+    public List<User> findAll();
+
 
 }
