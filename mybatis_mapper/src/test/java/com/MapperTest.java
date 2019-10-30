@@ -1,6 +1,4 @@
-package com.service;
-
-
+package com;
 
 
 import com.dao.UserMapper;
@@ -9,27 +7,33 @@ import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
+import org.junit.Test;
 
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.List;
 
-
-/**
- * @author JinLu
- */
-public class ServiceDemo {
-    public static void main(String[] args) throws IOException {
+public class MapperTest {
+    @Test
+    public void test1() throws IOException {
+        //获得核心配置文件
         InputStream resourceAsStream = Resources.getResourceAsStream("sqlMapConfig.xml");
+        //获得session工厂对象
         SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(resourceAsStream);
-        SqlSession sqlSession = sqlSessionFactory.openSession();
-
+        //获得session回话对象
+        SqlSession sqlSession = sqlSessionFactory.openSession(true);
         UserMapper mapper = sqlSession.getMapper(UserMapper.class);
-        List<User> all = mapper.findAll();
-        System.out.println(all);
 
-
-        User user = mapper.findById(1);
-        System.out.println(user);
+        //模拟条件
+        User user = new User();
+        user.setId(1);
+        user.setUsername("zhangsan");
+        user.setPassword("123");
+        List<User> userList = mapper.findByCondition(user);
+        System.out.println(userList);
     }
+
+
+
+
 }
