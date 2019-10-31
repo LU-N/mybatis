@@ -2,10 +2,13 @@ package com.domain;
 
 import java.util.Date;
 
+/**
+ * @author JinLu
+ */
 public class Order {
     private int id;
-    private Date ordertime;
-    private double total;
+    private String roleName;
+    private String roleDesc;
 
     /**当前订单属于哪个用户*/
     private User user;
@@ -18,20 +21,20 @@ public class Order {
         this.id = id;
     }
 
-    public Date getOrdertime() {
-        return ordertime;
+    public String getRoleName() {
+        return roleName;
     }
 
-    public void setOrdertime(Date ordertime) {
-        this.ordertime = ordertime;
+    public void setRoleName(String roleName) {
+        this.roleName = roleName;
     }
 
-    public double getTotal() {
-        return total;
+    public String getRoleDesc() {
+        return roleDesc;
     }
 
-    public void setTotal(double total) {
-        this.total = total;
+    public void setRoleDesc(String roleDesc) {
+        this.roleDesc = roleDesc;
     }
 
     public User getUser() {
@@ -46,8 +49,8 @@ public class Order {
     public String toString() {
         return "Order{" +
                 "id=" + id +
-                ", ordertime=" + ordertime +
-                ", total=" + total +
+                ", roleName='" + roleName + '\'' +
+                ", roleDesc='" + roleDesc + '\'' +
                 ", user=" + user +
                 '}';
     }

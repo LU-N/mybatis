@@ -21,7 +21,7 @@
     </environments>
     <!--加载映射文件-->
     <mappers>
-        <mapper resource="com/mapper/UserMapper.xml"></mapper>
-        <mapper resource="com/mapper/OrderMapper.xml"></mapper>
+        <mapper resource="mapper/UserMapper.xml"></mapper>
+        <mapper resource="mapper/OrderMapper.xml"></mapper>
     </mappers>
 </configuration>
