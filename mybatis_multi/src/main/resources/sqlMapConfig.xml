@@ -6,6 +6,8 @@
     <!--自定义别名-->
     <typeAliases>
         <typeAlias type="com.domain.User" alias="user"></typeAlias>
+        <typeAlias type="com.domain.Order" alias="order"></typeAlias>
+        <typeAlias type="com.domain.Role" alias="role"></typeAlias>
     </typeAliases>
     <!--数据源环境-->
     <environments default="developement">

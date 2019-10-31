@@ -13,4 +13,6 @@ public interface UserMapper {
      * @return
      */
     public List<User> findAll();
+
+    public List<User> findUserAndRoleAll();
 }

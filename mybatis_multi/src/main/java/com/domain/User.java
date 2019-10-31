@@ -13,6 +13,7 @@ public class User {
 
 
     private List<Order> orderList;
+    private List<Role> roleList;
 
     public int getId() {
         return id;
@@ -46,6 +47,14 @@ public class User {
         this.orderList = orderList;
     }
 
+    public List<Role> getRoleList() {
+        return roleList;
+    }
+
+    public void setRoleList(List<Role> roleList) {
+        this.roleList = roleList;
+    }
+
     @Override
     public String toString() {
         return "User{" +
@@ -53,6 +62,7 @@ public class User {
                 ", username='" + username + '\'' +
                 ", password='" + password + '\'' +
                 ", orderList=" + orderList +
+                ", roleList=" + roleList +
                 '}';
     }
 }
