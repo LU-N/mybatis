@@ -12,10 +12,11 @@
         <module name="mybatis_mapper" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
+    <bytecodeTargetLevel target="11">
+      <module name="mybatis_anno" target="11" />
       <module name="mybatis_dao" target="1.5" />
       <module name="mybatis_mapper" target="1.5" />
-      <module name="mybatis_multi" target="11" />
+      <module name="mybatis_multi" target="1.5" />
       <module name="mybatis_quick" target="1.5" />
     </bytecodeTargetLevel>
   </component>
